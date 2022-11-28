@@ -1,9 +1,9 @@
 FROM python:3.9.7-slim-buster
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src
 ENV FLASK_APP=app
 
-COPY /backend/requirements.txt ./
+COPY /backend ./
 
 RUN apt-get update && apt-get install python-dev python3-dev default-libmysqlclient-dev default-mysql-client build-essential -y
 
